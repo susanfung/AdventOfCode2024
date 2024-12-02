@@ -47,4 +47,24 @@ public class Day1 {
 
         return Arrays.stream(differences).sum();
     }
+
+        public int similarityScore(int[] array1, int[] array2) {
+        int[] similarities = new int[array1.length];
+        int[] products = new int[array1.length];
+
+        for (int i = 0; i < array1.length; i++) {
+            int count = 0;
+            int currentNumber = array1[i];
+
+            for (int num : array2) {
+                if (num == currentNumber) {
+                    count++;
+                }
+            }
+            similarities[i] = count;
+            products[i] = array1[i] * similarities[i];
+        }
+
+        return Arrays.stream(products).sum();
+    }
 }
