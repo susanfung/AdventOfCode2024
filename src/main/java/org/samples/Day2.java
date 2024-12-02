@@ -25,6 +25,10 @@ public class Day2 {
                     if (isSafePart1(numbers)) {
                         numberofReportsIsSafe++;
                     }
+                } else {
+                    if (isSafePart2(numbers)) {
+                        numberofReportsIsSafe++;
+                    }
                 }
 
                 reports.add(numbers);
@@ -65,4 +69,24 @@ public class Day2 {
         return increasing || decreasing;
     }
 
+    private boolean isSafePart2(int[] numbers) {
+        if (isSafePart1(numbers)) {
+            return true;
+        }
+
+        for (int i = 0; i < numbers.length; i++) {
+            int[] shortened = new int[numbers.length - 1];
+            for (int j = 0, k = 0; j < numbers.length; j++) {
+                if (j != i) {
+                    shortened[k++] = numbers[j];
+                }
+            }
+
+            if (isSafePart1(shortened)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
