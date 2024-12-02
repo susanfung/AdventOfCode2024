@@ -21,4 +21,13 @@ public class Day2Test {
 
         Approvals.verify(result);
     }
+
+    @Test
+    public void testDay2Part2_numberOfSafeReports() {
+        Day2 day2 = new Day2();
+        String filePath = "src/test/java/org/samples/Day2TestData.txt";
+        int result = day2.numberOfSafeReports(filePath, 2);
+
+        Approvals.verify(result);
+    }
 }
