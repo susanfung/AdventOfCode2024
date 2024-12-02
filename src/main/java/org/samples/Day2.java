@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Day2 {
-    public int numberOfSafeReports(String filePath) {
+    public int numberOfSafeReports(String filePath, int part) {
         List<int[]> reports = new ArrayList<>();
         int numberofReportsIsSafe = 0;
 
@@ -21,8 +21,10 @@ public class Day2 {
                     numbers[i] = Integer.parseInt(parts[i]);
                 }
 
-                if (isSafe(numbers)) {
-                    numberofReportsIsSafe++;
+                if (part == 1) {
+                    if (isSafePart1(numbers)) {
+                        numberofReportsIsSafe++;
+                    }
                 }
 
                 reports.add(numbers);
