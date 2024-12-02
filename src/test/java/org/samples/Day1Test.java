@@ -36,7 +36,7 @@ public class Day1Test {
     @Test
     public void testDay1Part1_answer() {
         Day1 day1 = new Day1();
-        String filePath = "./src/test/java/org/samples/Day1Part1Data.txt";
+        String filePath = "./src/test/java/org/samples/Day1Data.txt";
 
         int[] column1 = day1.parseColumn(filePath, 1);
         int[] column2 = day1.parseColumn(filePath, 2);
