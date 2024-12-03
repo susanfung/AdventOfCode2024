@@ -40,4 +40,24 @@ public class Day3Test {
 
         Approvals.verify(result);
     }
+
+    @Test
+    public void testDay3Part2_findEnabledMulCalls() {
+        Day3 day3 = new Day3();
+        String filePath = "src/test/java/org/samples/Day3Part2TestData.txt";
+
+        List<String> result = day3.findEnabledMulCalls(filePath);
+
+        Approvals.verify(result);
+    }
+
+    @Test
+    public void testDay3Part2_calculateMulWithInstructions() {
+        Day3 day3 = new Day3();
+        String filePath = "src/test/java/org/samples/Day3Part2TestData.txt";
+
+        int result = day3.calculateMulWithInstructions(filePath);
+
+        Approvals.verify(result);
+    }
 }
