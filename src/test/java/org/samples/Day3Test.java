@@ -20,4 +20,14 @@ public class Day3Test {
 
         Approvals.verify(result);
     }
+
+    @Test
+    public void testDay3Part1_calculateMul() {
+        Day3 day3 = new Day3();
+        String filePath = "src/test/java/org/samples/Day3TestData.txt";
+
+        int result = day3.calculateMul(filePath);
+
+        Approvals.verify(result);
+    }
 }
