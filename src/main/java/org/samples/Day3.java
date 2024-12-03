@@ -31,4 +31,22 @@ public class Day3 {
 
         return validCalls;
     }
+
+    public int calculateMul(String filePath) {
+        List<Integer> results = new ArrayList<>();
+        Pattern pattern = Pattern.compile("mul\\((\\d+),(\\d+)\\)");
+
+        List<String> validMulCalls = findValidMulCalls(filePath);
+
+        for (String call : validMulCalls) {
+            Matcher matcher = pattern.matcher(call);
+            if (matcher.find()) {
+                int x = Integer.parseInt(matcher.group(1));
+                int y = Integer.parseInt(matcher.group(2));
+                results.add(mul(x, y));
+            }
+        }
+
+        return results.stream().mapToInt(Integer::intValue).sum();
+    }
 }
