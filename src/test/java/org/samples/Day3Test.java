@@ -60,4 +60,14 @@ public class Day3Test {
 
         Approvals.verify(result);
     }
+
+    @Test
+    public void testDay3Part2_answer() {
+        Day3 day3 = new Day3();
+        String filePath = "src/test/java/org/samples/Day3Data.txt";
+
+        int result = day3.calculateMulWithInstructions(filePath);
+
+        Approvals.verify(result);
+    }
 }
