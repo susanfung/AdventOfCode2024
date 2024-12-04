@@ -35,4 +35,14 @@ public class Day4Test {
 
         Approvals.verify(result);
     }
+    
+    @Test
+    public void testDay4Part2_answer() throws IOException {
+        Day4 day4 = new Day4();
+        String filePath = "src/test/java/org/samples/Day4Data.txt";
+
+        String result = day4.findXMas(filePath);
+
+        Approvals.verify(result);
+    }
 }
